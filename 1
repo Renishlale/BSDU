@@ -1,0 +1,19 @@
+sudo apt update &S sudo apt upgrade -y
+
+sudo apt install apache2 mysql-server php php-mysqli php-gd php-xml php-json php-mbstring -y
+
+sudo systemctl start apache2
+
+sudo systemctl start mysql
+
+cd /var/www/html
+
+sudo git clone https://github.com/digininja/DVWA.git
+
+sudo chown -R wdata:ww-data /var/ww/html/DVWA
+
+sudo mysal -u root -p
+
+CREATE DATABASE dvwa;
+
+CREATE USER 'dvwauser'@'localhost' IDENTIFIED BY password' GRANT ALL PRIVILEGES ON dvwa. TO 'dvwauser@'localhost'; FLUSH PRIVILEGES;
